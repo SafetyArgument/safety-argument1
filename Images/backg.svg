@@ -1,3 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <path d="M50 10 L90 90 L10 90 Z" fill="none" stroke="black" stroke-width="2"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+  <defs>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M 50 0 L 0 0 0 50" fill="none" stroke="black" stroke-width="0.5" opacity="0.3"/>
+    </pattern>
+    <pattern id="dots" width="100" height="100" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="black" opacity="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#grid)" />
+  <rect width="100%" height="100%" fill="url(#dots)" />
+  
+  <!-- Technical drawing elements -->
+  <g stroke="black" fill="none" stroke-width="1" opacity="0.6">
+    <circle cx="500" cy="500" r="400" />
+    <circle cx="500" cy="500" r="380" stroke-dasharray="10,10" />
+    <path d="M 100 500 L 900 500 M 500 100 L 500 900" stroke-dasharray="20,20" />
+    
+    <!-- Isometric-like lines -->
+    <path d="M 0 0 L 1000 1000 M 1000 0 L 0 1000" stroke-width="0.5" opacity="0.2" />
+    
+    <!-- Corner markers -->
+    <path d="M 50 50 L 150 50 M 50 50 L 50 150" stroke-width="2" />
+    <path d="M 950 50 L 850 50 M 950 50 L 950 150" stroke-width="2" />
+    <path d="M 50 950 L 150 950 M 50 950 L 50 850" stroke-width="2" />
+    <path d="M 950 950 L 850 950 M 950 950 L 950 850" stroke-width="2" />
+  </g>
 </svg>
